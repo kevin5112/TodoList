@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script src="main.js"></script>
+    <header class="header">
+      <div class="logo">
+        <i class="icon fas fa-check-double"></i>
+        <h1>Todo List</h1>
+      </div>
+    </header>
+    <main class="main">
+      <nav class="navbar">
+        <button class="nav-default-btn inbox active" id="inbox">
+          <i class="fas fa-inbox"></i>Inbox
+        </button>
+        <button class="nav-default-btn today" id="today">
+          <i class="fas fa-calendar-day"></i>Today
+        </button>
+        <button class="nav-default-btn this-week" id="thisWeek">
+          <i class="fas fa-calendar-week"></i>This week
+        </button>
+        <h2 class="projects-tab">Projects</h2>
+        <div class="user-project-list" id="userProjectList">
+          <button class="user-project" id="userProject1">
+            <i class="fas fa-tasks"></i>
+            <span>user project 1</span>
+          </button>
+        </div>
+        <button class="add-projects-btn" id="addProjectBtn">
+          <i class="fas fa-plus"></i>Add Project
+        </button>
+        <div class="add-user-input hidden" id="addProjectInput">
+          <input type="text" class="text-field project" id="projectTextField" />
+          <div class="action-btns project">
+            <button class="add" id="addProject">Add</button>
+            <button class="cancel" id="cancelProject">Cancel</button>
+          </div>
+        </div>
+      </nav>
+      <div class="content">
+        <h2 class="content-title">Inbox</h2>
+        <div class="task-list" id="taskList">
+          <button class="button-task">
+            <div class="left-task-panel">
+              <i class="far fa-circle"></i>
+              <p class="task-content">task 1</p>
+            </div>
+            <div class="right-task-panel">
+              <p id="due-date" class="due-date">22/01/2024</p>
+            </div>
+          </button>
+          <button class="button-task">
+            <div class="left-task-panel">
+              <i class="far fa-circle"></i>
+              <p class="task-content">task 2</p>
+            </div>
+            <div class="right-task-panel">
+              <p id="due-date" class="due-date">10/01/2024</p>
+            </div>
+          </button>
+        </div>
+        <button class="add-task-btn" id="addTaskBtn">
+          <i class="fas fa-plus"></i>Add Task
+        </button>
+        <div class="add-user-input hidden" id="addUserInput">
+          <input type="text" class="text-field task" id="userTextField" />
+          <div class="action-btns task">
+            <button class="add" id="add">Add</button>
+            <button class="cancel" id="cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>Copyright © 2024 kevin5112</p>
+      <a href="https://github.com/kevin5112" target="_blank">
+        <i class="fab fa-github"></i
+      ></a>
+    </footer>
+  </body>
+</html>

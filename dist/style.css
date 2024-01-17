@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+:root {
+  --primary-dark: #333;
+  --secondary-dark: #444;
+  --primary-light: #eee;
+  --secondary-light: #ddd;
+  --third-light: #fff;
+  --header-height: 100px;
+  --xs: 8px;
+  --sm: 12px;
+  --md: 16px;
+  --lg: 20px;
+  --xl: 24px;
+  --xxl: 30px;
+  --title: 40px;
+  --btn-green: #aaffaa;
+  --btn-green-border: #99dd99;
+  --btn-red: #ffbebe;
+  --btn-red-border: #eeadad;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo > i {
+  font-size: 40px;
+}
+
+.header {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  font-size: var(--xl);
+  padding: 0 var(--md);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  min-width: 250px;
+  background-color: var(--secondary-light);
+  padding: var(--xxl);
+  height: calc(100vh - var(--header-height));
+}
+
+.navbar > button,
+.user-project {
+  padding: var(--xs);
+  border: none;
+  text-align: left;
+  background-color: var(--secondary-light);
+  font-size: var(--md);
+  border-radius: var(--xs);
+}
+
+button:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+.navbar > button.active {
+  filter: brightness(90%);
+  font-weight: bold;
+}
+
+i {
+  margin-right: 10px;
+}
+
+.fa-inbox {
+  margin-right: 7px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  gap: var(--md);
+  align-items: start;
+  margin: 0 auto;
+  padding: 40px 60px;
+}
+
+.content-title {
+  font-size: var(--xxl);
+}
+
+.add-task-btn {
+  width: 100%;
+  text-align: left;
+  background-color: var(--secondary-light);
+  font-size: var(--md);
+  border: none;
+  padding: 10px;
+  border-radius: var(--xs);
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.button-task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: none;
+  padding: var(--sm);
+  font-size: var(--md);
+  border-radius: var(--xs);
+  background-color: var(--primary-light);
+}
+
+.left-task-panel {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-task-panel > i {
+  margin-right: 10px;
+  font-size: var(--lg);
+}
+
+.right-task-panel {
+}
+
+/* projects button*/
+.projects-tab {
+  margin: var(--md) 0;
+}
+
+.add-projects-btn {
+  margin-top: var(--lg);
+  padding: var(--md);
+}
+
+.user-project {
+  width: 100%;
+}
+
+/* footer */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+.fa-github {
+  color: var(--primary-light);
+  font-size: 22px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* user input blocks */
+.add-user-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.add-user-input .text-field {
+  border-radius: 5px;
+  background-color: var(--third-light);
+  border: 1px solid var(--secondary-light);
+  padding: 10px;
+}
+
+.add-user-input .text-field .task {
+  height: var(--title);
+}
+
+.add-user-input .text-field.project {
+  margin-top: var(--lg);
+  height: var(--xxl);
+}
+
+input:focus {
+  outline: none;
+  padding: 10px;
+}
+
+.action-btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.action-btns > button {
+  width: 100%;
+  font-size: var(--md);
+  font-weight: bold;
+}
+
+.action-btns.task > button {
+  height: var(--title);
+}
+
+.action-btns.project > button {
+  height: var(--xl);
+}
+
+.add {
+  background-color: var(--btn-green);
+  border: 1px solid var(--btn-green-border);
+}
+
+.cancel {
+  background-color: var(--btn-red);
+  border: 1px solid var(--btn-red-border);
+}
